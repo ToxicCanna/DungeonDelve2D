@@ -21,7 +21,7 @@ public class SaveLoadExample : MonoBehaviour
     private void SaveData()
     {
         PlayerPrefs.SetInt("id", 345);
-        PlayerPrefs.SetFloat("value" 34.56f);
+        PlayerPrefs.SetFloat("value", 34.56f);
         PlayerPrefs.SetString("name", "killian");
 
         PlayerPrefs.SetFloat("playerPos_x", playerTransform.position.x);

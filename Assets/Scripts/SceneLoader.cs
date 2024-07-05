@@ -9,6 +9,6 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     public void LoadSceneAdditive(string name)
     {
-        SceneManager.LoadScene(name, LoadSceneAdditive);
+        SceneManager.LoadScene(name, LoadSceneMode.Additive);
     }
 }

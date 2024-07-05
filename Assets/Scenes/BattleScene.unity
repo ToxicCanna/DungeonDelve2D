@@ -470,8 +470,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -172.57623, y: -47.635}
-  m_SizeDelta: {x: 148.34058, y: 66.73}
+  m_AnchoredPosition: {x: -148.73, y: -47.635}
+  m_SizeDelta: {x: 196.03, y: 66.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200112879
 MonoBehaviour:
@@ -506,9 +506,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lvl
-
-'
+  m_Text: 'Lvl: 100'
 --- !u!222 &200112880
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -869,8 +867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 338.674, y: -47.635}
-  m_SizeDelta: {x: 537.84, y: 66.73001}
+  m_AnchoredPosition: {x: 264.55, y: -47.635}
+  m_SizeDelta: {x: 389.6, y: 66.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &315069569
 CanvasRenderer:
@@ -913,7 +911,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Demon King
 --- !u!1 &334090566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,8 +2546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -14.326965, y: 52.444603}
-  m_SizeDelta: {x: -168.26001, y: 53.1107}
+  m_AnchoredPosition: {x: 9.545288, y: 52.444603}
+  m_SizeDelta: {x: -120.5154, y: 53.1107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141737199
 MonoBehaviour:
@@ -2672,7 +2670,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Player
 --- !u!222 &1150429865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3593,7 +3591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: c973330688f28434393a4c283c3622e9, type: 2}
-  level: 5
+  level: 1
   isPlayer: 1
 --- !u!1 &1768809988
 GameObject:
@@ -3684,7 +3682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: 9272a78ae1d2772489371e49d373505b, type: 2}
-  level: 5
+  level: 1
   isPlayer: 0
 --- !u!1 &1833642729
 GameObject:
@@ -3737,8 +3735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -14.326965, y: 52.444603}
-  m_SizeDelta: {x: -168.26001, y: 53.1107}
+  m_AnchoredPosition: {x: 8.0795, y: 52.444603}
+  m_SizeDelta: {x: -123.447, y: 53.1107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833642732
 MonoBehaviour:
@@ -4099,8 +4097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -172.57623, y: -47.635}
-  m_SizeDelta: {x: 148.34058, y: 66.73}
+  m_AnchoredPosition: {x: -150.2, y: -47.635}
+  m_SizeDelta: {x: 193.1, y: 66.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2030389206
 CanvasRenderer:
@@ -4143,9 +4141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lvl
-
-'
+  m_Text: 'Lvl: 100'
 --- !u!1 &2098556953
 GameObject:
   m_ObjectHideFlags: 0

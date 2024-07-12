@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5547531429214055708}
   - component: {fileID: 554226890662902028}
   - component: {fileID: 2928848879591071208}
+  - component: {fileID: 6779726367799780464}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,6 +148,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   collisionOffset: 0.05
+  sceneBuildIndex: 0
 --- !u!50 &5547531429214055708
 Rigidbody2D:
   serializedVersion: 4
@@ -225,3 +227,16 @@ MonoBehaviour:
   encounterThreshold: 5
   maxStepsUntilEncounter: 50
   minStepsUntilEncounter: 5
+--- !u!114 &6779726367799780464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499021030629214179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3d206c7fb0bfe43aa66d6e2885dce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 2462249547853070333}

@@ -14,7 +14,7 @@ public class HPBar : MonoBehaviour
     public IEnumerator SetHPSmooth(float newHp)
     {
         float curHp = health.transform.localScale.x;
-        float changeAmt = curHp - newHp;
+        float changeAmt = curHp +- newHp;
 
         while (curHp - newHp > Mathf.Epsilon)
         {

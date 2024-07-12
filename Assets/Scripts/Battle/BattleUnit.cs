@@ -5,21 +5,43 @@ using UnityEngine.UI;
 
 public class BattleUnit : MonoBehaviour
 {
-    [SerializeField] EnemyBase _base;
-    [SerializeField] int level;
     [SerializeField] bool isPlayer;
+    [SerializeField] BattleHud hud;
 
-    public Enemy Enemy 
-    { 
-        get; set; 
-    }
-
-    public void Setup()
+    public bool IsPlayer
     {
-        Enemy = new Enemy(_base, level);
-        if(isPlayer)
-            GetComponent<Image>().sprite = Enemy.Base.PlayerSprite;
-        else
-            GetComponent<Image>().sprite = Enemy.Base.EnemySprite;
+        get
+        {
+            return isPlayer;
+        }
     }
+
+    public BattleHud Hud
+    {
+        get
+        {
+            return hud;
+        }
+    }
+
+    public Enemy Enemy
+    {
+        get; set;
+    }
+
+    public void Setup(Enemy enemy)
+    {
+        Enemy = enemy;
+        if (isPlayer)
+        {
+            GetComponent<Image>().sprite = Enemy.Base.PlayerSprite;
+        }
+        else
+        {
+            GetComponent<Image>().sprite = Enemy.Base.EnemySprite;
+        }
+
+        hud.SetData(enemy);
+    }
+
 }

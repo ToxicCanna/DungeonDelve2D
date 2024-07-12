@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: Defend
   m_EditorClassIdentifier: 
   skillName: Defend
-  skillDescription: 
+  skillDescription: Raises defense
   type: 1
   power: 0
   accuracy: 100
+  alwaysHits: 0
   mana: 99999
+  category: 2
+  effects:
+    boosts:
+    - stat: 1
+      boost: 1
+    status: 0
+    volatileStatus: 0
+  secondaries: []
+  target: 1

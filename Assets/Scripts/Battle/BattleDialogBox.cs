@@ -34,6 +34,8 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds (1f/lettersPerSecond);
         }
+
+        yield return new WaitForSeconds(1f);
     }
 
     public void EnableDialogText(bool enabled)
@@ -55,10 +57,13 @@ public class BattleDialogBox : MonoBehaviour
         for (int i=0; i<actionTexts.Count; ++i)
         {
             if (i == selectedAction)
+            {
                 actionTexts[i].color = highlightedColor;
+            }
             else
+            {
                 actionTexts[i].color = Color.black;
-
+            }
         }
 
     }
@@ -68,23 +73,46 @@ public class BattleDialogBox : MonoBehaviour
         for (int i = 0; i < skillTexts.Count; ++i)
         {
             if (i == selectedSkill)
+            {
                 skillTexts[i].color = highlightedColor;
+            }
             else
+            {
                 skillTexts[i].color = Color.black;
+            }
 
         }
         manaText.text = $"Mana{skill.Mana}/{skill.Base.Mana}";
         typeText.text = skill.Base.Type.ToString();
+
+        if (skill.Mana == 0)
+        {
+            manaText.color = Color.red;
+        }
+        else
+        {
+            manaText.color = Color.black;
+        }
     }
 
     public void SetSkillNames(List<Skill> skills)
     {
+        if (skills == null)
+        {
+            Debug.LogWarning("Skills list is null in SetSkillNames.");
+            return;
+        }
+
         for (int i = 0; i < skillTexts.Count; ++i)
         {
             if (i < skills.Count)
+            {
                 skillTexts[i].text = skills[i].Base.Name;
+            }
             else
+            {
                 skillTexts[i].text = "-";
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement Settings")]
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] ContactFilter2D movementFilter;
     [SerializeField] float collisionOffset = 2f;
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
 
     //track last scene
     public int sceneBuildIndex;
+
+    private void Awake()
+    {
+        ConditionsDB.Init();
+    }
 
     // Start is called before the first frame update
     void Start()

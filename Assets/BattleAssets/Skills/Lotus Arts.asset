@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Lotus Arts
   skillDescription: 
-  type: 5
+  type: 10
   power: 300
   accuracy: 150
+  alwaysHits: 0
   mana: 15
+  category: 0
+  effects:
+    boosts: []
+    status: 0
+    volatileStatus: 0
+  secondaries: []
+  target: 0

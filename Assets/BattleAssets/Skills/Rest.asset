@@ -25,5 +25,10 @@ MonoBehaviour:
     boosts: []
     status: 3
     volatileStatus: 0
-  secondaries: []
+  secondaries:
+  - boosts: []
+    status: 0
+    volatileStatus: 0
+    chance: 0
+    target: 0
   target: 0

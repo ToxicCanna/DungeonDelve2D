@@ -20,7 +20,6 @@ public class LevelChange : MonoBehaviour
             //player entered, switch level
             print("Switching to " + sceneBuildIndex);
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
-            PlayerPrefs.DeleteAll();
         }
     }
 }

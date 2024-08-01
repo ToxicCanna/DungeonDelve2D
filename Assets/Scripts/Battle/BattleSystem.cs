@@ -153,6 +153,8 @@ public class BattleSystem : MonoBehaviour
             yield return RunSkill(enemyUnit, playerUnit, enemySkill);
             yield return RunAfterTurn(enemyUnit);
             if (state == BattleState.BattleOver) yield break;
+
+            ActionSelect();
         }
     }
 
@@ -522,7 +524,6 @@ public class BattleSystem : MonoBehaviour
             {
                 yield return dialogBox.TypeDialog($"You got cut off!");
                 state = BattleState.RunningTurn;
-
             }
         }
     }

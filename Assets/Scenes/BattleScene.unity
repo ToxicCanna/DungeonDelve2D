@@ -3059,7 +3059,7 @@ GameObject:
   - component: {fileID: 1678728558}
   - component: {fileID: 1678728557}
   m_Layer: 0
-  m_Name: ItemText
+  m_Name: HealText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3117,7 +3117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Items
+  m_Text: Heal
 --- !u!222 &1678728558
 CanvasRenderer:
   m_ObjectHideFlags: 0

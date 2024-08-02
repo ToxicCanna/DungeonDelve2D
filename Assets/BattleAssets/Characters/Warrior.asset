@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Warrior
   description: Rough and Tough
-  playerSprite: {fileID: 21300000, guid: fd95a9ae680682e4aa9b55b7ecdc6a12, type: 2}
-  enemySprite: {fileID: 21300000, guid: fd95a9ae680682e4aa9b55b7ecdc6a12, type: 2}
+  playerSprite: {fileID: 21300000, guid: 1320d3a84def9d5429b04c6344c86624, type: 2}
+  enemySprite: {fileID: 21300000, guid: 1320d3a84def9d5429b04c6344c86624, type: 2}
   type1: 1
   type2: 0
-  maxHp: 50
-  attack: 15
-  defense: 15
-  focus: 10
-  resist: 10
-  dexterity: 15
-  expYield: 10000
+  maxHp: 100
+  attack: 25
+  defense: 25
+  focus: 15
+  resist: 15
+  dexterity: 25
+  expYield: 150
   growthRate: 1
   learnableSkills:
   - skillBase: {fileID: 11400000, guid: 5ca8f5daf48998745949fefcfd22a2d4, type: 2}
@@ -34,4 +34,4 @@ MonoBehaviour:
   - skillBase: {fileID: 11400000, guid: 1ec6ad38290471b438284882e36d9f36, type: 2}
     level: 1
   - skillBase: {fileID: 11400000, guid: 5882abf6781058743a31b3b4b3a1354e, type: 2}
-    level: 5
+    level: 10

@@ -44,8 +44,6 @@ public class SceneLoader : MonoBehaviour
         if (PlayerPrefs.HasKey("sceneName"))
         {
             string sceneName = PlayerPrefs.GetString("sceneName");
-
-            // Load scene asynchronously
             SceneManager.LoadScene(sceneName);
         }
         else
@@ -82,15 +80,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    string GetSceneKeyPrefix(int sceneIndex)
-    {
-        // Use scene index as part of PlayerPrefs key prefix to ensure uniqueness per scene
-        return "Scene" + sceneIndex.ToString() + "_";
-    }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        string sceneKeyPrefix = GetSceneKeyPrefix(currentSceneIndex);
 
         // Check if there is saved player position data
         if (PlayerPrefs.HasKey("playerPos_x") && PlayerPrefs.HasKey("playerPos_y") && PlayerPrefs.HasKey("playerPos_z"))
@@ -107,5 +99,11 @@ public class SceneLoader : MonoBehaviour
         {
             Debug.LogWarning("No saved player position found in PlayerPrefs.");
         }
+    }
+
+    bool IsBossBattle()
+    {
+        var bossMarker = GameObject.FindWithTag("BossBattle");
+        return bossMarker != null;
     }
 }

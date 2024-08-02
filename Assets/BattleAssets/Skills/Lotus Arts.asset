@@ -13,16 +13,23 @@ MonoBehaviour:
   m_Name: Lotus Arts
   m_EditorClassIdentifier: 
   skillName: Lotus Arts
-  skillDescription: 
+  skillDescription: An Unholy Flurry of Strikes imbued with the hopes, dreams, and
+    emotions of the user.
   type: 10
-  power: 300
-  accuracy: 150
+  power: 150
+  accuracy: 125
   alwaysHits: 0
   mana: 15
+  priority: 0
   category: 0
   effects:
     boosts: []
     status: 0
     volatileStatus: 0
-  secondaries: []
+  secondaries:
+  - boosts: []
+    status: 0
+    volatileStatus: 0
+    chance: 0
+    target: 0
   target: 0

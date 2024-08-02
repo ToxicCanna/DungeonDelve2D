@@ -17,8 +17,9 @@ MonoBehaviour:
   type: 5
   power: 0
   accuracy: 100
-  alwaysHits: 0
+  alwaysHits: 1
   mana: 25
+  priority: 0
   category: 2
   effects:
     boosts:

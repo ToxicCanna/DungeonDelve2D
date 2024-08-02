@@ -475,17 +475,29 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle(bool won)
     {
-        if (!won)
+       if (!won)
         {
             // Clear all player prefs if the player loses
             PlayerPrefs.DeleteAll();
             Debug.Log("PlayerPrefs cleared.");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0); // Load a specific scene for losing, such as a game over screen
         }
         else
         {
-            SceneLoader sceneLoader = FindObjectOfType<SceneLoader>();
-            sceneLoader.LoadData();
+            // Check if the current scene is a boss battle
+            GameObject bossMarker = GameObject.FindWithTag("BossBattle");
+            if (bossMarker != null)
+            {
+                // It's a boss battle; proceed to the win screen
+                PlayerPrefs.SetString("sceneName", "WinScreen");
+                PlayerPrefs.Save(); // Ensure the data is saved
+                SceneManager.LoadScene("WinScreen");
+            }
+            else
+            {
+                SceneLoader sceneLoader = FindObjectOfType<SceneLoader>();
+                sceneLoader.LoadData();
+            }
         }
     }
 

@@ -17,8 +17,13 @@ MonoBehaviour:
   type: 10
   power: 75
   accuracy: 100
+  alwaysHits: 0
   mana: 50
-  category: 0
+  priority: 0
+  category: 1
   effects:
     boosts: []
+    status: 0
+    volatileStatus: 0
+  secondaries: []
   target: 0

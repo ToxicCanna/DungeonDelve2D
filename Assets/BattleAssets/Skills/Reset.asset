@@ -10,29 +10,53 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12cfc125231caef4aa5d8fd56f244ccc, type: 3}
-  m_Name: Dodge
+  m_Name: Reset
   m_EditorClassIdentifier: 
-  skillName: Dodge
-  skillDescription: Lowers enemy Accuracy while boosting your evasion!
-  type: 1
+  skillName: Reset
+  skillDescription: Center yourself, resetting all stat changes.
+  type: 10
   power: 0
   accuracy: 100
   alwaysHits: 1
-  mana: 25
+  mana: 5
   priority: 0
   category: 2
   effects:
     boosts:
+    - stat: 0
+      boost: -12
+    - stat: 1
+      boost: -12
+    - stat: 2
+      boost: -12
+    - stat: 3
+      boost: -12
+    - stat: 4
+      boost: -12
     - stat: 5
-      boost: -1
+      boost: -12
+    - stat: 6
+      boost: -12
     status: 0
     volatileStatus: 0
   secondaries:
   - boosts:
+    - stat: 0
+      boost: 6
+    - stat: 1
+      boost: 6
+    - stat: 2
+      boost: 6
+    - stat: 3
+      boost: 6
+    - stat: 4
+      boost: 6
+    - stat: 5
+      boost: 6
     - stat: 6
-      boost: 1
+      boost: 6
     status: 0
     volatileStatus: 0
     chance: 100
     target: 1
-  target: 0
+  target: 1

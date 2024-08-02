@@ -226,7 +226,7 @@ public class WeaknessChart
 
         /*Life*/new float [] { 2f, 1f, 1.5f, 2f, 1f, 1f, 1f, 2f, 1f, 2f },
 
-        /*Demon*/new float [] { 3f, 2f, 2f, 2f, 2f, 2f, 2f, 2f, 2f, 3f }
+        /*Demon*/new float [] { 2f, 2f, 2f, 2f, 2f, 2f, 2f, 2f, 2f, 3f }
     };
 
     public static float GetEffect(EnemyType attackType, EnemyType defenseType)

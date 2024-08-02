@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -85,7 +84,7 @@ public class PlayerController : MonoBehaviour
     private bool IsWholeStepMove()
     {
         // Check if both X and Y movement are whole numbers
-        return Mathf.Abs(_rb.position.x - lastPosition.x) >= 1f || Mathf.Abs(_rb.position.y - lastPosition.y) >= 1f;
+        return Mathf.Abs(_rb.position.x - lastPosition.x) >= 3.5f || Mathf.Abs(_rb.position.y - lastPosition.y) >= 3.5f;
     }
 
 

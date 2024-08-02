@@ -6,11 +6,12 @@ public class EncounterLogic : MonoBehaviour
     public static EncounterLogic instance; // Singleton instance
 
     public int stepsTaken = 0;
-    public int encounterThreshold = 5; // Minimum steps before checking for encounter
-    public int maxStepsUntilEncounter = 50; // Maximum steps until next encounter
-    public int minStepsUntilEncounter = 5; // Minimum steps until next encounter
+    public int encounterThreshold = 25; // Minimum steps before checking for encounter
+    public int maxStepsUntilEncounter = 100; // Maximum steps until next encounter
+    public int minStepsUntilEncounter = 25; // Minimum steps until next encounter
 
-    PlayerController playerController;
+    private PlayerController playerController;
+    private int stepsUntilNextEncounter;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class EncounterLogic : MonoBehaviour
 
         // Initialize steps taken
         stepsTaken = 0;
+        SetRandomStepsUntilNextEncounter();
 
         // Start the first encounter check
         CheckEncounter();
@@ -44,12 +46,12 @@ public class EncounterLogic : MonoBehaviour
     {
         if (stepsTaken >= encounterThreshold)
         {
-            int stepsUntilNextEncounter = Random.Range(minStepsUntilEncounter, maxStepsUntilEncounter + 1);
             if (stepsTaken >= stepsUntilNextEncounter)
             {
                 TriggerRandomEncounter();
-                // Reset steps taken
+                // Reset steps taken and set a new encounter threshold
                 stepsTaken = 0;
+                SetRandomStepsUntilNextEncounter();
             }
         }
     }
@@ -71,5 +73,10 @@ public class EncounterLogic : MonoBehaviour
 
         //Load battle scene
         SceneManager.LoadScene("BattleScene");
+    }
+
+    void SetRandomStepsUntilNextEncounter()
+    {
+        stepsUntilNextEncounter = Random.Range(minStepsUntilEncounter, maxStepsUntilEncounter + 1);
     }
 }

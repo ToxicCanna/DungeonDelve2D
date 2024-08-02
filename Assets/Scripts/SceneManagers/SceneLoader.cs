@@ -6,7 +6,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
 
-    void Update()
+    /*void Update()
     {
         // these are for testing purposes mainly, and will not be available to players
 
@@ -24,6 +24,15 @@ public class SceneLoader : MonoBehaviour
         {
             LoadPlayerPosition();
         }
+    }*/
+
+    void OnApplicationQuit()
+    {
+        // Clear PlayerPrefs when the application quits
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save(); // Ensure changes are saved
+
+        Debug.Log("PlayerPrefs cleared on application quit.");
     }
 
     public void SaveData()

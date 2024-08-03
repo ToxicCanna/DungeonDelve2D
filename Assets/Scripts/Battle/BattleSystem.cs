@@ -39,6 +39,12 @@ public class BattleSystem : MonoBehaviour
         var localEnemy = FindObjectOfType<AreaEnemies>().GetComponent<AreaEnemies>().GetRandomLocalEnemy();
 
         StartBattle(player, localEnemy);
+
+        GameObject bossMarker = GameObject.FindWithTag("BossBattle");
+        if (bossMarker != null)
+        {
+            isBossBattle = true;
+        }
     }
 
     private void StartBattle(Enemy player, Enemy localEnemy)
@@ -484,9 +490,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            // Check if the current scene is a boss battle
-            GameObject bossMarker = GameObject.FindWithTag("BossBattle");
-            if (bossMarker != null)
+            if (isBossBattle == true)
             {
                 // It's a boss battle; proceed to the win screen
                 PlayerPrefs.SetString("sceneName", "WinScreen");

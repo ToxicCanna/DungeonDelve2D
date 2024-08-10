@@ -103,6 +103,7 @@ public class ConditionsDB
                         enemy.StatusChanges.Enqueue($"The {enemy.Base.Name} braced itself against the cold!");
                         return true;
                     }
+                    enemy.StatusChanges.Enqueue($"The {enemy.Base.Name} is too cold to move");
                     return false;
                 },
                 OnAfterTurn = (Enemy enemy) =>

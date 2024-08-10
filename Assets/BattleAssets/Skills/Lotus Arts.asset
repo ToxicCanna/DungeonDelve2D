@@ -16,7 +16,7 @@ MonoBehaviour:
   skillDescription: An Unholy Flurry of Strikes imbued with the hopes, dreams, and
     emotions of the user.
   type: 10
-  power: 150
+  power: 125
   accuracy: 125
   alwaysHits: 0
   mana: 15
